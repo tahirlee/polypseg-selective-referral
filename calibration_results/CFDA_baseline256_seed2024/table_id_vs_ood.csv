@@ -1,0 +1,31 @@
+id,ood,score,AUROC
+Kvasir-SEG,CVC-ClinicDB,Mean confidence (1 - p̄),0.5336465141612201
+Kvasir-SEG,CVC-ClinicDB,Confidence SD (σp),0.5383033769063181
+Kvasir-SEG,CVC-ClinicDB,Low-confidence share (100 - very-high %),0.5449754901960785
+Kvasir-SEG,CVC-ClinicDB,"Entropy, predicted region",0.5276416122004357
+Kvasir-SEG,CVC-ClinicDB,"Entropy, boundary band",0.11827342047930282
+Kvasir-SEG,CVC-ClinicDB,"Entropy, whole image",0.3877587145969498
+Kvasir-SEG,CVC-ClinicDB,1 - max probability,0.4343477668845316
+Kvasir-SEG,CVC-ClinicDB,Predicted DSC (1 - E[DSC]),0.5205882352941177
+Kvasir-SEG,CVC-ClinicDB,MC-dropout variance,0.6448529411764706
+Kvasir-SEG,CVC-ClinicDB,MC-dropout mutual information,0.6427832244008715
+Kvasir-SEG,BKAI-IGH,Mean confidence (1 - p̄),0.5574416666666666
+Kvasir-SEG,BKAI-IGH,Confidence SD (σp),0.5868
+Kvasir-SEG,BKAI-IGH,Low-confidence share (100 - very-high %),0.5748083333333334
+Kvasir-SEG,BKAI-IGH,"Entropy, predicted region",0.5259
+Kvasir-SEG,BKAI-IGH,"Entropy, boundary band",0.7557666666666667
+Kvasir-SEG,BKAI-IGH,"Entropy, whole image",0.2840916666666667
+Kvasir-SEG,BKAI-IGH,1 - max probability,0.29974999999999996
+Kvasir-SEG,BKAI-IGH,Predicted DSC (1 - E[DSC]),0.5171833333333334
+Kvasir-SEG,BKAI-IGH,MC-dropout variance,0.6916833333333334
+Kvasir-SEG,BKAI-IGH,MC-dropout mutual information,0.6858000000000001
+Kvasir-SEG,PolypGen,Mean confidence (1 - p̄),0.615988939492518
+Kvasir-SEG,PolypGen,Confidence SD (σp),0.6240186510518326
+Kvasir-SEG,PolypGen,Low-confidence share (100 - very-high %),0.6213077423552376
+Kvasir-SEG,PolypGen,"Entropy, predicted region",0.6046031229668185
+Kvasir-SEG,PolypGen,"Entropy, boundary band",0.8549772283669486
+Kvasir-SEG,PolypGen,"Entropy, whole image",0.48587616569073955
+Kvasir-SEG,PolypGen,1 - max probability,0.4596725222294513
+Kvasir-SEG,PolypGen,Predicted DSC (1 - E[DSC]),0.6166016048579483
+Kvasir-SEG,PolypGen,MC-dropout variance,0.6580459770114943
+Kvasir-SEG,PolypGen,MC-dropout mutual information,0.6546356538711777

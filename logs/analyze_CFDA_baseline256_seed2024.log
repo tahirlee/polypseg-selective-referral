@@ -1,0 +1,10 @@
+Temperature fitted on validation split (88 images): T = 1.748
+Validation-derived thresholds (mean shares over images with a prediction): very-high 91.76, high 4.95, uncertain 3.29
+Thresholds used: very-high 91.76363225330802, high 4.9460059390980655, uncertain 3.290361807593914
+Validation images used: 88
+Pixel-level pass: Kvasir-SEG
+Pixel-level pass: CVC-ClinicDB
+Pixel-level pass: BKAI-IGH
+Pixel-level pass: PolypGen
+
+Done. Results in calibration_results\CFDA_baseline256_seed2024  (send summary.md and the figures)
