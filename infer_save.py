@@ -6,7 +6,7 @@ For the validation images and every test dataset it saves
   <out_dir>/<dataset>/logits/<name>.npy   logit map at the network resolution (256 x 256, float16)
   <out_dir>/<dataset>/gt/<name>.png       ground truth resized to the network resolution (nearest neighbour)
   <out_dir>/<dataset>/cases.csv           one row per image:
-        segmentation metrics at the original resolution (same post-processing as test_paper.py),
+        segmentation metrics at the original resolution (same post-processing as test.py),
         confidence descriptors (Section 3.2.2), entropy scores, image-level indicators,
         MC-dropout scores (K = 20 passes; dropout and DropBlock active), PolypGen center.
 
@@ -181,7 +181,7 @@ def main():
             w.writeheader()
             w.writerows(rows)
         d = np.array([r['dsc'] for r in rows])
-        print(f'  mDSC = {d.mean():.4f}  (should equal the result of test_paper.py for this model)')
+        print(f'  mDSC = {d.mean():.4f}  (should equal the result of test.py for this model)')
 
 
 if __name__ == '__main__':

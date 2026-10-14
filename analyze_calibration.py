@@ -12,7 +12,7 @@ Reads the outputs of infer_save.py for one trained model and produces:
   5. sensitivity of the triage rule to each threshold                  -> Figure 8
   6. ID vs. OOD discrimination and PolypGen results per center
 
-The triage thresholds must be those derived by test_paper.py for the same model
+The triage thresholds must be those derived by test.py for the same model
 (metrics.json -> "thresholds"); pass them with --thresholds_json or --vh_thr / --h_thr / --u_thr.
 
 Example:
@@ -47,7 +47,7 @@ parser.add_argument('--pix_per_image', type=int, default=3000, help='pixels samp
 parser.add_argument('--n_boot', type=int, default=1000)
 parser.add_argument('--seed', type=int, default=0)
 parser.add_argument('--thresholds_json', type=str, default='',
-                    help='metrics.json written by test_paper.py for the same model (contains the thresholds)')
+                    help='metrics.json written by test.py for the same model (contains the thresholds)')
 parser.add_argument('--vh_thr', type=float, default=None, help='theta_VH: refer if very-high share is below this')
 parser.add_argument('--h_thr', type=float, default=None, help='theta_H: refer if high share is above this')
 parser.add_argument('--u_thr', type=float, default=None, help='theta_U: refer if uncertain share is above this')
@@ -57,7 +57,7 @@ if opt.thresholds_json:
     _t = json.load(open(opt.thresholds_json))['thresholds']
     opt.vh_thr, opt.h_thr, opt.u_thr = _t['vh'], _t['h'], _t['u']
 if None in (opt.vh_thr, opt.h_thr, opt.u_thr):
-    raise SystemExit('Give the triage thresholds: --thresholds_json <metrics.json of test_paper.py> '
+    raise SystemExit('Give the triage thresholds: --thresholds_json <metrics.json of test.py> '
                      'or --vh_thr, --h_thr and --u_thr.')
 
 rng = np.random.default_rng(opt.seed)

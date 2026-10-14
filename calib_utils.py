@@ -30,7 +30,7 @@ def binary_entropy(p):
 
 
 # ----------------------------------------------------------------------------
-# Post-processing and segmentation metrics (same definitions as test_paper.py, Section 4.3)
+# Post-processing and segmentation metrics (same definitions as test.py, Section 4.3)
 # ----------------------------------------------------------------------------
 def postprocess(prob, threshold=0.5, min_size=300):
     binary = (prob > threshold).astype(np.uint8)

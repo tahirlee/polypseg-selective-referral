@@ -4,7 +4,7 @@ mean DSC of both, paired difference with a 95% bootstrap confidence interval, an
 Wilcoxon signed-rank test on the per-image DSC.
 
 Input: two per-image CSV files with the columns 'name' and 'dsc'
-       (test_paper.py writes them as <out_dir>/<model>/per_image_<dataset>.csv).
+       (test.py writes them as <out_dir>/<model>/per_image_<dataset>.csv).
 
 Example (CFDA-Net vs. Fu-TransHNet on PolypGen, same training seed):
   python compare_methods.py results/CFDA_seed6645/per_image_PolypGen.csv ^

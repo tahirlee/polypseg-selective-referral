@@ -20,9 +20,9 @@ Seeds           : 6645, 1234 and 2024 (three independent runs)
 
 Example (the three runs of the paper)
 -------------------------------------
-  python train_paper.py --seed 6645 --save_dir ./trained_models/CFDA_seed6645/
-  python train_paper.py --seed 1234 --save_dir ./trained_models/CFDA_seed1234/
-  python train_paper.py --seed 2024 --save_dir ./trained_models/CFDA_seed2024/
+  python train.py --seed 6645 --save_dir ./trained_models/CFDA_seed6645/
+  python train.py --seed 1234 --save_dir ./trained_models/CFDA_seed1234/
+  python train.py --seed 2024 --save_dir ./trained_models/CFDA_seed2024/
 
 Outputs (in --save_dir)
 -----------------------

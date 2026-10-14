@@ -67,6 +67,26 @@ python infer_save.py --checkpoint ./trained_models/CFDA_seed6645/best_model.pth 
 python analyze_calibration.py --in_dir ./calibration_outputs/CFDA_seed6645 --out_dir ./calibration_results/CFDA_seed6645 --thresholds_json ./results/CFDA_seed6645/metrics.json
 ```
 
+## Trained models and results of the paper
+
+The three trained models and all outputs reported in the paper are included:
+
+| Folder | Content |
+|---|---|
+| `trained_models/revision/CFDA_baseline256_seed{6645,1234,2024}/` | `best_model.pth`, `config.json` (all settings and library versions), `history.csv` (per-epoch validation DSC), `split_train.txt`, `split_val.txt` |
+| `results_revision/` | output of `test.py`: `summary.md` / `summary_mean_sd.csv` (mean ± SD, Tables 2–6 and 9), `summary_per_model.csv` (per run, Supplementary Tables S1–S2), and per run `metrics.json` and `per_image_<dataset>.csv` |
+| `calibration_results/CFDA_baseline256_seed*/` | output of `analyze_calibration.py` (Tables 10–11, Figures 8–11) |
+| `logs/` | original console logs of training, testing and the calibration analysis |
+
+The tag `CFDA_baseline256` denotes CFDA-Net at 256 × 256 input. Rates are fractions (0.228 = 22.8%).
+The calibration outputs were generated with an earlier version of `analyze_calibration.py`, in which the triage
+rule was labelled "submitted"; it is the same rule (Eq. 34) with the validation-derived thresholds of each model.
+
+To evaluate the provided models:
+```
+python test.py --models ./trained_models/revision/CFDA_baseline256_seed6645/best_model.pth ./trained_models/revision/CFDA_baseline256_seed1234/best_model.pth ./trained_models/revision/CFDA_baseline256_seed2024/best_model.pth
+```
+
 ## Ablation (Table 8)
 
 `model/cfda_net.py` provides `ablation_config('add' | 'drop', component)` for the additive and
@@ -87,4 +107,7 @@ Citation details will be added after publication.
 
 ## License
 
-Code for academic research use. The datasets are subject to the licenses of their providers.
+The code is released under the MIT License (see `LICENSE`). The trained models were trained on Kvasir-SEG and are
+provided for research use only. The datasets are not included and remain subject to the licenses of their providers.
+The Fu-TransHNet code (`lib/`) is not included and is subject to its authors' terms.
+This software is intended for research only and is not a medical device.

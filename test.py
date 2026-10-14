@@ -24,7 +24,7 @@ Outputs (in --out_dir):
   summary_mean_sd.csv / summary.md         mean +/- SD over models
 
 Example (the three runs of the paper):
-  python test_paper.py --models ./trained_models/CFDA_seed6645/best_model.pth ^
+  python test.py --models ./trained_models/CFDA_seed6645/best_model.pth ^
       ./trained_models/CFDA_seed1234/best_model.pth ./trained_models/CFDA_seed2024/best_model.pth
 """
 import argparse
