@@ -1,0 +1,9 @@
+torch==2.6.0
+torchvision==0.21.0
+numpy
+opencv-python
+pillow
+pandas
+scipy
+scikit-learn
+matplotlib
