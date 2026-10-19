@@ -45,6 +45,8 @@ Masks are binary (0/255). Run `python check_data.py` before training.
 
 Input 256 × 256, Adam (lr 1e-4, β = 0.9/0.999), batch size 8, cosine annealing, at most 500 epochs,
 early stopping on validation DSC (patience 20), BCE + Dice loss, ImageNet-pretrained MobileNetV2.
+The benchmark of Jha et al. (2024), from which the results of the eight compared methods are taken,
+used an early-stopping patience of 50 epochs; all other main settings are the same (Section 4.5).
 ```
 python train.py --seed 6645 --save_dir ./trained_models/CFDA_seed6645/
 python train.py --seed 1234 --save_dir ./trained_models/CFDA_seed1234/
@@ -100,6 +102,9 @@ and the ImageNet weights in `./pretrained/` (DeiT-S `deit_small_patch16_224-cd65
 python train.py --arch futranshnet --seed 6645 --save_dir ./trained_models/FuT_seed6645/
 python test.py --arch futranshnet --models ./trained_models/FuT_seed6645/best_model.pth --out_dir ./results_futranshnet/
 ```
+The Fu-TransHNet models reported in the paper were trained on the 792 original training images with
+on-the-fly augmentation only (no offline expansion). To reproduce them, set `--image_root` and `--gt_root`
+to a folder that contains only the 792 original images and masks (seeds 6645, 1234 and 2024).
 
 ## Citation
 
