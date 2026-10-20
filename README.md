@@ -1,11 +1,8 @@
-# CFDA-Net: Cross-Domain Polyp Segmentation with Confidence-Based Selective Referral
+# Polyp Segmentation (will update after paper acceptance)
 
-Code for the paper *"A Cross-Domain Expert System for Colorectal Polyp Segmentation with
-Confidence-Based Selective Referral for Clinician Review"*.
+Code for the paper *"After paper acceptance"*.
 
-CFDA-Net (2.09 M parameters) is trained on Kvasir-SEG only and evaluated without adaptation on
-Kvasir-SEG, CVC-ClinicDB, BKAI-IGH and PolypGen. Case-level confidence descriptors from a single
-forward pass drive a triage rule that approves confident cases and refers the others for clinician review.
+
 
 ## Repository
 
